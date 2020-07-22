@@ -1,0 +1,40 @@
+<!Doctype html>
+<html lang="fr">
+<head>
+  <style type="text/css">
+    textarea{
+      background-color: black;
+      color : #fff;
+    }
+  </style>
+  <meta charset="utf-8">
+  <title>Titre de la page</title>
+  <link rel="stylesheet" href="">
+  
+</head>
+<body>
+		<div id="show"></div>
+ <textarea type="text" ></textarea>
+ <button id="btn" >submit</button>
+ <script >
+  function frz(url){
+ 
+url = (url.search("https://") != -1) ? url.replace("https://","") :url.replace("http://","");
+var pos = url.search('/');
+if (pos != -1) {
+url = url.slice(0,pos)
+}
+return url + "<br>";
+
+}
+var content ='';
+document.getElementById('btn').addEventListener('click',function(){
+  var textarea = document.querySelector('textarea');
+  textarea = textarea.value.split('\n');
+  for (let i = 0; i <= textarea.length; i++) {
+  document.getElementById('show').innerHTML += frz(textarea[i]);
+}
+});
+  </script>
+</body>
+</html>

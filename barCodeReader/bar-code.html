@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    div {
+      display: inline;
+      position: absolute;
+    }
+    #show {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+  <body>
+    <div id="show"></div>
+    <br />
+
+    <script>
+      var content = "";
+      var code128 =
+        "001011011110001001011101101001111011001111010111100101101101001111011101000010011100010100";
+      var left = 3;
+      for (let r = 0; r < code128.length; r++) {
+        if (code128[r] == "0") {
+          left = left + 1 * 3;
+
+          content +=
+            "<span style='border-left: 3px solid black; height: 300px; left: ${left}" +
+            left +
+            "px;'></span>";
+        } else if (code128[r] == "1") {
+          left = left + 1 * 3;
+
+          content +=
+            "<span style='border-left: 3px solid white; height: 300px; left: ${left}" +
+            left +
+            "px;'></span>";
+        }
+      }
+      document.getElementById("show").innerHTML = content;
+    </script>
+  </body>
+</html>
