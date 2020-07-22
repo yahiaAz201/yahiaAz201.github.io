@@ -1,0 +1,39 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+span {
+  display: inline-block;
+  height: 50px;
+}
+
+#list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#text {
+  height: 25px;
+  width: 250px;
+  border: 0.5px solid #b3b3b3;
+  border-radius: 5px;
+  background: none;
+  padding-left: 20px;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+button {
+  height: 30px;
+  width: 60px;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  background-color: #580be6;
+  position: absolute;
+  top: 37%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
