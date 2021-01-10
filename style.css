@@ -1,0 +1,15 @@
+body {
+  height: 400vh;
+}
+#output {
+  height: 50px;
+  width: 2px;
+  background-color: black;
+  position: fixed;
+  display: block;
+}
+
+#value {
+  position: fixed;
+  margin-top: 100px;
+}
